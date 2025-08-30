@@ -5,21 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4efe8977-6ccb-4011-99ad-3677828759fa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/components/ResumeCard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/ScoreCircle.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/lib/puter.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routes/auth.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/constants/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/.well-known/appspecific/com.chrome.devtools.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types/puter.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/lib/pdfToImg.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/lib/utils.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/upload.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/root.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/root.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/welcome/logo-dark.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/welcome/logo-light.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/welcome/welcome.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/constants/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/constants/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +88,11 @@
       <workItem from="1755891874066" duration="647000" />
       <workItem from="1755892542850" duration="608000" />
       <workItem from="1755893174536" duration="3972000" />
-      <workItem from="1755972212969" duration="6025000" />
+      <workItem from="1755972212969" duration="6340000" />
+      <workItem from="1756052202605" duration="2426000" />
+      <workItem from="1756394784159" duration="1695000" />
+      <workItem from="1756396510531" duration="4362000" />
+      <workItem from="1756537337637" duration="3127000" />
     </task>
     <servers />
   </component>
