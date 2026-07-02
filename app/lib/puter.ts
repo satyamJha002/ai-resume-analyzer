@@ -249,6 +249,17 @@ export const usePuterStore = create<PuterStore>((set, get) => {
             return;
         }
 
+        const existingScript = document.querySelector(
+            'script[src="https://js.puter.com/v2/"]'
+        );
+        if (!existingScript) {
+            const script = document.createElement("script");
+            script.src = "https://js.puter.com/v2/";
+            script.onerror = () =>
+                setError("Puter.js failed to load. Check your connection.");
+            document.head.appendChild(script);
+        }
+
         const interval = setInterval(() => {
             if (getPuter()) {
                 clearInterval(interval);
@@ -334,24 +345,21 @@ export const usePuterStore = create<PuterStore>((set, get) => {
             return;
         }
 
-        return puter.ai.chat(
-            [
-                {
-                    role: "user",
-                    content: [
-                        {
-                            type: "file",
-                            puter_path: path,
-                        },
-                        {
-                            type: "text",
-                            text: message,
-                        },
-                    ],
-                },
-            ],
-            { model: "claude-sonnet-4" }
-        ) as Promise<AIResponse | undefined>;
+            return puter.ai.chat([
+              {
+                role: "user",
+                content: [
+                  {
+                    type: "file",
+                    puter_path: path,
+                  },
+                  {
+                    type: "text",
+                    text: message,
+                  },
+                ],
+              },
+            ]) as Promise<AIResponse | undefined>;
     };
 
     const img2txt = async (image: string | File | Blob, testMode?: boolean) => {

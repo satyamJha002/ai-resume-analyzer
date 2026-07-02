@@ -1,4 +1,6 @@
-import {Link} from "react-router";
+"use client";
+
+import { Link } from "react-router";
 import React, { useEffect, useState } from "react";
 import ScoreCircle from "~/components/ScoreCircle";
 import { usePuterStore } from "~/lib/puter";

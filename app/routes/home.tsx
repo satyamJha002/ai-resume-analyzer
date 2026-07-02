@@ -1,3 +1,5 @@
+"use client";
+
 import type { Route } from "./+types/home";
 import Navbar from "~/components/Navbar";
 import ResumeCard from "~/components/ResumeCard";
@@ -27,13 +29,33 @@ export default function Home() {
   useEffect(() => {
     const loadResume = async () => {
       setLoadingResumes(true);
-      const resumes = (await kv.list("resume:*", true)) as KVItem[];
-      const parsedResumes = resumes.map(
-        (resume) => JSON.parse(resume.value) as Resume
-      );
+      try {
+        const list = (await kv.list("resume:*", true)) as
+          | KVItem[]
+          | null
+          | undefined;
+        if (!Array.isArray(list) || list.length === 0) {
+          setResumes([]);
+          setLoadingResumes(false);
+          return;
+        }
 
-      setResumes(parsedResumes || []);
-      setLoadingResumes(false);
+        const parsedResumes: Resume[] = [];
+        for (const item of list) {
+          try {
+            parsedResumes.push(JSON.parse(item.value) as Resume);
+          } catch (err) {
+            console.warn("Skipped invalid resume entry:", item, err);
+          }
+        }
+
+        setResumes(parsedResumes);
+      } catch (err) {
+        console.error("Failed to load resumes", err);
+        setResumes([]);
+      } finally {
+        setLoadingResumes(false);
+      }
     };
     loadResume();
   }, []);
